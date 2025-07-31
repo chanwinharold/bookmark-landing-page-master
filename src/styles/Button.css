@@ -1,0 +1,62 @@
+.btn-login {
+    border: 2px solid transparent;
+    padding: 0.25rem 1rem;
+    color: var(--color-neutral-100);
+    background-color: var(--color-secondary-400);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 8px;
+    transition: all 400ms ease-out;
+
+    &:hover {
+        color: var(--color-secondary-400);
+        border-color: var(--color-secondary-400);
+        background-color: var(--color-neutral-100);
+    }
+}
+
+.btn-login-menu {
+    width: 100%;
+    border: 2px solid var(--color-neutral-100);
+    padding: 0.25rem 1rem;
+    color: var(--color-neutral-100);
+    background-color: transparent;
+    border-radius: 0.25rem;
+    transition: all 400ms ease-out;
+
+    &:hover {
+        color: var(--color-secondary-400);
+        border-color: var(--color-secondary-400);
+    }
+}
+
+.btn-common {
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 8px;
+    transition: all 400ms ease-out;
+
+    @media screen and (max-width: 700px) {
+        font-size: calc(var(--fs-normal) * 0.6);
+    }
+}
+
+.btn-blue {
+    color: var(--color-neutral-100);
+    background-color: var(--color-main-600);
+
+    &:hover {
+        color: var(--color-main-600);
+        border-color: var(--color-main-600);
+        background-color: var(--color-neutral-200);
+    }
+}
+
+.btn-white {
+    color: var(--color-main-800);
+    background-color: var(--color-neutral-200);
+
+    &:hover { border-color: var(--color-main-800); }
+}

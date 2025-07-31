@@ -13,8 +13,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Blue 600: hsl(231, 69%, 60%)
-- Red 400: hsl(0, 94%, 66%)
+
 
 ### Neutral
 

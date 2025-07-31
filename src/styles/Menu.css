@@ -1,0 +1,65 @@
+.menu {
+    --bg-color: hsla(229, 31%, 21%, 0.9);
+
+    position: fixed;
+    inset: 0; z-index: 5;
+    display: grid;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    * { color: var(--color-neutral-100); }
+
+    animation: appear 400ms ease-out both;
+}
+
+.menu-container, .menu-navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu-head {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-navbar ul {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+}
+.menu-navbar li {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    border-top: 1px solid var(--color-neutral-200);
+    padding: 0.75rem 1rem;
+
+    &:last-child { border-bottom: 1px solid var(--color-neutral-200); }
+}
+
+.menu-social {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+}
+
+.icon-bm { fill: var(--bg-color); }
+.icon-text, .icon-circle, .icon-facebook, .icon-twitter { fill: var(--color-neutral-100); }
+
+.icon-facebook, .icon-twitter { transition: all 400ms ease-out; &:hover { fill: var(--color-secondary-400); } }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
