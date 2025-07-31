@@ -1,20 +1,20 @@
 import "../styles/Main.css"
-import heroSrc from "../assets/images/illustration-hero.svg";
 import Article from "./Article.jsx";
 import Button from "./Button.jsx";
 
-function Main() {
+function Main({containerClass, imageClass, articleClass, buttonClass, ButtonNames, ArticleContent, imageSrc}) {
 
     return (
-        <div className="container bookmark-manager">
-            <img srcSet={heroSrc} alt="hero illustration"/>
-            <div className="article-container">
-                <Article title="A Simple Bookmark Manager">A clean and simple interface to organize your favourite websites. Open a new
-                    browser tab and see your sites load instantly. Try it for free.
-                </Article>
+        <div className={containerClass}>
+            <img className={imageClass} srcSet={imageSrc} alt="illustration"/>
+            <div className={articleClass}>
+                <Article content={ArticleContent} styleType={articleClass} />
                 <div>
-                    <Button styleType="btn-common btn-blue">Get it on Chrome</Button>
-                    <Button styleType="btn-common btn-white">Get it on Firefox</Button>
+                    {
+                        ButtonNames.map((buttonName, index) => (
+                            <Button key={index} styleType={buttonClass}>{buttonName}</Button>
+                        ))
+                    }
                 </div>
             </div>
         </div>

@@ -1,8 +1,7 @@
 import "../styles/Header.css"
 import Button from "./Button.jsx";
 
-function Header({setDisplayed}) {
-    const Links = ["features", "pricing", "contact"]
+function Header({setDisplayed, Links}) {
     let isMobile = document.body.clientWidth <= 700
 
     return (
@@ -17,7 +16,7 @@ function Header({setDisplayed}) {
                         <ul>
                             {
                                 Links.map(link => (
-                                    <li key={link}><a className="header-link" key={link} href={link}>{link.toUpperCase()}</a></li>
+                                    <li key={link}><a className="header-link" key={link} href="#">{link.toUpperCase()}</a></li>
                                 ))
                             }
                         </ul>

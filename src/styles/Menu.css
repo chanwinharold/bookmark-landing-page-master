@@ -6,6 +6,7 @@
     display: grid;
     padding: 2rem;
     background-color: var(--bg-color);
+    backdrop-filter: blur(100%);
     * { color: var(--color-neutral-100); }
 
     animation: appear 400ms ease-out both;

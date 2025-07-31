@@ -1,0 +1,58 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs-navbar {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+.tabs-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-main-800);
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        flex-direction: column;
+        border: none; }
+}
+.tabs-list li {
+    padding-block: 1rem; padding-inline: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: all 250ms ease-out;
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 2px solid var(--color-main-800);
+        &:first-child { border-top: 2px solid var(--color-main-800); } }
+
+    &:hover { color: var(--color-secondary-400); cursor: pointer; }
+}
+
+.extension {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.isActive {
+    border-bottom: 2px solid var(--color-secondary-400) !important;
+}
+
+.visually-hidden {
+  position: absolute;      /* Retire l’élément du flux normal */
+  width: 1px;              /* Réduit la taille au strict minimum */
+  height: 1px;
+  margin: -1px;            /* Évite tout effet de bord visuel */
+  padding: 0;
+  overflow: hidden;        /* Cache tout contenu débordant */
+  clip: rect(0 0 0 0);     /* Ancienne méthode pour cacher le contenu */
+  clip-path: inset(50%);  /* Nouvelle méthode (plus moderne) */
+  white-space: nowrap;    /* Évite les sauts de ligne */
+  border: 0;
+}

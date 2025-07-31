@@ -11,7 +11,7 @@
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
     html {
-        interpolate-size: allow-keywords;
+        /*interpolate-size: allow-keywords;*/
     }
 }
 
@@ -70,8 +70,7 @@ h1, h2, h3, h4, h5, h6 {
     --fs-normal: 1.125rem;
 
     --min-width: 250px;
-    --max-width: 1024px;
-
+    --max-width: 1440px;
 }
 
 * {
@@ -100,4 +99,9 @@ body {
 
 #svg {
     fill: var(--color-main-800);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }

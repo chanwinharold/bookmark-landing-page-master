@@ -1,17 +1,28 @@
-.bookmark-manager {
+.bookmark {
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
     gap: 2rem;
 
+}
+
+.manager {
+    flex-direction: row-reverse;
     @media screen and (max-width: 700px) {
         text-align: center;
         flex-direction: column;
     }
-
-    position: relative;
 }
 
-img {
+.tabs {
+    flex-direction: row;
+    @media screen and (max-width: 700px) {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.image {
     display: block;
     max-width: 100%;
     width: 50%;
@@ -22,6 +33,7 @@ img {
 }
 
 .article-container {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -32,5 +44,20 @@ img {
     @media screen and (max-width: 700px) {
         justify-content: center;
     }
+}
 
+.animate {
+    animation: appear-from-left 800ms ease-out;
+}
+
+@keyframes appear-from-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
 }

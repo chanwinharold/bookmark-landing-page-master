@@ -16,7 +16,7 @@ function Menu({setDisplayed}) {
                     <ul>
                         {
                             Links.map(link => (
-                                <li key={link}><a className="header-link menu-link" key={link} href={link}>{link.toUpperCase()}</a></li>
+                                <li key={link}><a className="header-link menu-link" key={link} href="#">{link.toUpperCase()}</a></li>
                             ))
                         }
                     </ul>

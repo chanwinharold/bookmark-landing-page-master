@@ -1,0 +1,25 @@
+.extension-container {
+    max-width: 300px;
+    text-align: center;
+    padding-block: 3rem 2rem;
+    margin: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: var(--color-neutral-100);
+
+    display: inline-grid;
+    place-content: center;
+    place-items: center;
+    justify-items: center;
+    gap: 2rem;
+
+    div, img, button { margin-inline: 1rem; }
+}
+
+.extension-container h3 {
+    font-size: calc(var(--fs-normal) * 1.2);
+    font-weight: var(--fw-bold);
+}
+.extension-container p {
+    font-size: calc(var(--fs-normal) * 0.8);
+}
