@@ -14,9 +14,11 @@
         cursor: pointer;
     }
 }
-.faq-container p {
-    margin-top: 2rem;
-    animation: faq-appear 800ms ease-out;
+.faq-container div:nth-child(2) {
+    max-height: 320px;
+    overflow: hidden;
+    & p {margin-top: 2rem;}
+    transition: all 600ms ease;
 }
 
 .faq-head {
@@ -30,16 +32,16 @@
         line-height: 2.5ch;
     }
 }
+.faq-head svg {
+    transition: transform 600ms ease;
+}
 
-@keyframes faq-appear {
-    from {
-        opacity: 0;
-        transform: translateY(-2rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+.faq-paragraph {
+    max-height: 0 !important;
+}
+.faq-arrow {
+    transform: rotate(180deg);
 }
 
 
